@@ -22,6 +22,12 @@
           </a>
         </li>
         <li>
+            <a href="./icons.html">
+              <i class="fa-solid fa-calendar"></i>
+              <p>Kategori</p>
+            </a>
+          </li>
+        <li>
           <a href="./icons.html">
             <i class="fa-solid fa-calendar"></i>
             <p>Mutations</p>
