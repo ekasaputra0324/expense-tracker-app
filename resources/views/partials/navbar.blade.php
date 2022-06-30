@@ -1,62 +1,64 @@
-<nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
-    <div class="container-fluid">
-      <div class="navbar-wrapper">
-        <div class="navbar-toggle">
-          <button type="button" class="navbar-toggler">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
-          </button>
+<div id="main">
+    <nav class="navbar navbar-header navbar-expand navbar-light">
+        <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+        <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
+                <li class="dropdown nav-icon">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                        <div class="d-lg-inline-block">
+                            <i data-feather="bell"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large">
+                        <h6 class='py-2 px-4'>Notifications</h6>
+                        <ul class="list-group rounded-none">
+                            <li class="list-group-item border-0 align-items-start">
+                                <div class="avatar bg-success me-3">
+                                    <span class="avatar-content"><i data-feather="shopping-cart"></i></span>
+                                </div>
+                                <div>
+                                    <h6 class='text-bold'>New Order</h6>
+                                    <p class='text-xs'>
+                                        An order made by Ahmad Saugi for product Samsung Galaxy S69
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown nav-icon me-2">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                        <div class="d-lg-inline-block">
+                            <i data-feather="mail"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" >
+                        <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                        <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                        <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                        <div class="avatar me-1">
+                            <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                        </div>
+                        <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                        <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                        <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        {{-- <a class="navbar-brand" href="javascript:;">Paper Dashboard 2</a>       --}}
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navigation">
-        {{-- <form>
-          <div class="input-group no-border">
-            <input type="text" value="" class="form-control" placeholder="Search...">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <i class="nc-icon nc-zoom-split"></i>
-              </div>
-            </div>
-          </div>
-        </form> --}}
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link btn-magnify" href="javascript:;">
-              <i class="nc-icon nc-layout-11"></i>
-              <p>
-                <span class="d-lg-none d-md-block">Stats</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item btn-rotate dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="nc-icon nc-bell-55"></i>
-              <p>
-                <span class="d-lg-none d-md-block">Some Actions</span>
-              </p>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn-rotate" href="javascript:;">
-              <i class="nc-icon nc-settings-gear-65"></i>
-              <p>
-                <span class="d-lg-none d-md-block">Account</span>
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
