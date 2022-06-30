@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','index')->name('dashboard');
+});
+Route::controller(LoginController::class)->group(function(){
+    Route::get('/login','index');
+});
+Route::controller(RegisterController::class)->group(function(){
+    Route::get('/register','index')->name('register');
 });
