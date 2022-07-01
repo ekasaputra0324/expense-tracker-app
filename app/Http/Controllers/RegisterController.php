@@ -11,4 +11,7 @@ class RegisterController extends Controller
         "title" => "Register"
         ]);
     }
+    public function store(Request $request){
+        dd($request);
+    }
 }

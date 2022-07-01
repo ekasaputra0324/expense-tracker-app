@@ -20,11 +20,12 @@
                         <h3>Sign In</h3>
                         <p>Please sign in to continue to Voler.</p>
                     </div>
-                    <form action="index.html">
+                    <form action="{{route('authenticate')}}" method="post">
+                        @csrf
                         <div class="form-group position-relative has-icon-left">
-                            <label for="username">Username</label>
+                            <label for="email">Email</label>
                             <div class="position-relative">
-                                <input type="text" class="form-control" id="username">
+                                <input type="email" class="form-control" id="username" name="email">
                                 <div class="form-control-icon">
                                     <i data-feather="user"></i>
                                 </div>
@@ -38,7 +39,7 @@
                                 </a>
                             </div>
                             <div class="position-relative">
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="password">
                                 <div class="form-control-icon">
                                     <i data-feather="lock"></i>
                                 </div>
@@ -54,7 +55,7 @@
                             </div>
                         </div>
                         <div class="clearfix">
-                            <button class="btn btn-primary float-end">Submit</button>
+                            <button type="submit" class="btn btn-primary float-end">Submit</button>
                         </div>
                     </form>
                 </div>

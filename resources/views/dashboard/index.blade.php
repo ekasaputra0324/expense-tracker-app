@@ -12,9 +12,9 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>BALANCE</h3>
+                                <h3 class='card-title' style="text-transform: capitalize;">Dompet Utama</h3>
                                 <div class="card-right d-flex align-items-center">
-                                    <p>$50 </p>
+                                    <p>$5000 </p>
                                 </div>
                             </div>
                             <div class="chart-wrapper">
@@ -29,7 +29,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>Revenue</h3>
+                                <h3 class='card-title' style="text-transform: capitalize;">Pemasukan</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p>$532,2 </p>
                                 </div>
@@ -46,7 +46,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>ORDERS</h3>
+                                <h3 class='card-title' style="text-transform: capitalize;">Pengeluaran</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p>1,544 </p>
                                 </div>
@@ -63,7 +63,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>Sales Today</h3>
+                                <h3 class='card-title'style="text-transform: capitalize;">Total</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p>423 </p>
                                 </div>

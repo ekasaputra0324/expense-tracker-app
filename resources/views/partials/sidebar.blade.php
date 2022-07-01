@@ -26,8 +26,8 @@
         <li class="sidebar-item  has-sub">
 
             <a href="#" class='sidebar-link'>
-                <i data-feather="triangle" width="20"></i>
-                <span>Components</span>
+                <i data-feather="file-text" width="20"></i>
+                <span>Mutasi</span>
             </a>
 
 
@@ -95,31 +95,18 @@
 
 
 
-        <li class="sidebar-item  has-sub">
+        <li class="sidebar-item">
 
             <a href="#" class='sidebar-link'>
                 <i data-feather="briefcase" width="20"></i>
-                <span>Extra Components</span>
+                <span>Kategori</span>
             </a>
-
-
-            <ul class="submenu ">
-
-                <li>
-                    <a href="component-extra-avatar.html">Avatar</a>
-                </li>
-
-                <li>
-                    <a href="component-extra-divider.html">Divider</a>
-                </li>
-
-            </ul>
 
         </li>
 
 
 
-        <li class='sidebar-title'>Forms &amp; Tables</li>
+        {{-- <li class='sidebar-title'>Forms &amp; Tables</li>
 
 
 
@@ -326,7 +313,7 @@
         </li>
 
 
-</ul>
+</ul> --}}
 </div>
 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
 </div>

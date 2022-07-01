@@ -20,13 +20,13 @@
                         <h3>Sign In</h3>
                         <p>Please sign in to continue to Voler.</p>
                     </div>
-                    <form action="index.html">
+                    <form action="{{route('store')}}" method="post">
                         <div class="form-group position-relative has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
                                 <input type="text" class="form-control" id="username">
                                 <div class="form-control-icon">
-                                    <i data-feather="user"></i>
+                                    {{-- <i data-feather="user"></i> --}}
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="position-relative">
                                 <input type="password" class="form-control" id="password">
                                 <div class="form-control-icon">
-                                    <i data-feather="lock"></i>
+                                    {{-- <i data-feather="lock"></i> --}}
                                 </div>
                             </div>
                             <br>
