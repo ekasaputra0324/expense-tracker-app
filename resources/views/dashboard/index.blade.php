@@ -14,7 +14,7 @@
                             <div class='px-3 py-3 d-flex justify-content-between'>
                                 <h3 class='card-title' style="text-transform: capitalize;">Dompet Utama</h3>
                                 <div class="card-right d-flex align-items-center">
-                                    <p>$5000 </p>
+                                    <p>Rp.5000 </p>
                                 </div>
                             </div>
                             <div class="chart-wrapper">
@@ -31,7 +31,7 @@
                             <div class='px-3 py-3 d-flex justify-content-between'>
                                 <h3 class='card-title' style="text-transform: capitalize;">Pemasukan</h3>
                                 <div class="card-right d-flex align-items-center">
-                                    <p>$532,2 </p>
+                                    <p>Rp.532,2 </p>
                                 </div>
                             </div>
                             <div class="chart-wrapper">
@@ -47,8 +47,9 @@
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
                                 <h3 class='card-title' style="text-transform: capitalize;">Pengeluaran</h3>
+                     
                                 <div class="card-right d-flex align-items-center">
-                                    <p>1,544 </p>
+                                    <p>Rp.1,544 </p>
                                 </div>
                             </div>
                             <div class="chart-wrapper">

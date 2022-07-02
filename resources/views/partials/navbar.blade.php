@@ -10,10 +10,10 @@
                 <li class="dropdown nav-icon">
                     <a href="#" data-bs-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                         <div class="d-lg-inline-block">
-                            <i data-feather="bell"></i>
+                            {{-- <i data-feather="bell"></i> --}}
                         </div>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large">
+                    {{-- <div class="dropdown-menu dropdown-menu-end dropdown-menu-large">
                         <h6 class='py-2 px-4'>Notifications</h6>
                         <ul class="list-group rounded-none">
                             <li class="list-group-item border-0 align-items-start">
@@ -28,20 +28,19 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </li>
                 <li class="dropdown nav-icon me-2">
                     <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                         <div class="d-lg-inline-block">
-                            <i data-feather="mail"></i>
+                            {{-- <i data-feather="mail"></i> --}}
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" >
                         <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                        <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                        <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                        <form action="" method="post">
+                        </form>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -49,14 +48,18 @@
                         <div class="avatar me-1">
                             <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
                         </div>
-                        <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                        <div class="d-none d-md-block d-lg-inline-block" style="text-transform: capitalize">{{ Auth::user()->name }}</div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
                         <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                        <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                        <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                        {{-- <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a> --}}
+                        {{-- <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a> --}}
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                        <button class="dropdown-item mr-4" style="color: red"><i data-feather="log-out"></i>Logout</button>
+                        </form>
+                        {{-- <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a> --}}
                     </div>
                 </li>
             </ul>

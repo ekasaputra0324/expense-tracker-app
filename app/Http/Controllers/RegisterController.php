@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redis;
-
+Use Alert;
 class RegisterController extends Controller
 {
     public function index(){
@@ -14,11 +15,18 @@ class RegisterController extends Controller
         ]);
     }
     public function store(Request $request){
+        $password = $request->password;
+        $hash = Hash::make($password);
+        // dd($hash);
         $data = new User();
-        $data->name = $request->name;
+        $data->name = $request->username;
         $data->email = $request->email;
-        $data->password = $request->password;
-        $data->save();
+        $data->password = $hash;
+        if ($data->save()) {
+            // redirect('register');
+            Alert::success('Success ', 'Data user berhasil di tambahkam');
+            return redirect('login');
+        }
    }
    public function update(Request $request, $id){
     dd($request);

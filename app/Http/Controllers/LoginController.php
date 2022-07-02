@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Stmt\Return_;
@@ -22,8 +23,18 @@ class LoginController extends Controller
         ]);
         if (Auth::attempt($credentials))
             $request->session()->regenerate();
-            // redirect('/');
+            redirect('/');
         }
+        public function logout(Request $request){
+
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
+     
+        return redirect('login');
+    }
 
 
 

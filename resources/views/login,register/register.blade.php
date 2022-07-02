@@ -12,6 +12,7 @@
     <div id="auth">
 <div class="container">
     <div class="row">
+        @include('sweetalert::alert')
         <div class="col-md-5 col-sm-12 mx-auto">
             <div class="card pt-4">
                 <div class="card-body">
@@ -21,21 +22,16 @@
                         <p>Please sign in to continue to Voler.</p>
                     </div>
                     <form action="{{route('store')}}" method="post">
+                        @csrf
                         <div class="form-group position-relative has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
-                                <input type="text" class="form-control" id="username">
-                                <div class="form-control-icon">
-                                    {{-- <i data-feather="user"></i> --}}
-                                </div>
+                                <input type="text" class="form-control" id="username" name="username">
                             </div>
                         </div>
                         <div class="position-relative">
                             <label for="">Email</label>
-                            <input type="password" class="form-control" id="password">
-                            <div class="form-control-icon">
-                                {{-- <i data-feather="user"></i> --}}
-                            </div>
+                            <input type="email" class="form-control" id="email" name="email">
                         </div>
                         <br>
                         <div class="form-group position-relative has-icon-left">
@@ -43,10 +39,7 @@
                                 <label for="password">Password</label>
                             </div>
                             <div class="position-relative">
-                                <input type="password" class="form-control" id="password">
-                                <div class="form-control-icon">
-                                    {{-- <i data-feather="lock"></i> --}}
-                                </div>
+                                <input type="password" class="form-control" id="password" name="password">
                             </div>
                             <br>
 
