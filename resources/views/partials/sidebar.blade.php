@@ -7,7 +7,7 @@
 <ul class="menu">
 
 
-        <li class='sidebar-title'>Main Menu</li>
+        <li class='sidebar-title'>MENU UTAMA</li>
 
 
 
@@ -54,10 +54,7 @@
 
         <li class="sidebar-item">
 
-            <a href="#" class='sidebar-link'>
-                <i data-feather="briefcase" width="20"></i>
-                <span>Kategori</span>
-            </a>
+         
 
         </li>
 

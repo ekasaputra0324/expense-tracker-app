@@ -23,7 +23,7 @@ class LoginController extends Controller
         ]);
         if (Auth::attempt($credentials))
             $request->session()->regenerate();
-            redirect('/');
+            return redirect()->intended('dashboard');
         }
         public function logout(Request $request){
 
