@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
 </head>
 <body>
@@ -35,12 +36,16 @@
     <script src="assets/js/feather-icons/feather.min.js"></script>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
-
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <script src="assets/vendors/chartjs/Chart.min.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
     <script src="assets/js/template/logout.js"></script>
-
+    <script>
+        $(document).ready( function () {
+            $('#datables').DataTable();
+    });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

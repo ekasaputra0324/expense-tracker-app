@@ -23,10 +23,9 @@ class RegisterController extends Controller
         $data->email = $request->email;
         $data->password = $hash;
         if ($data->save()) {
-            // redirect('register');
             Alert::success('Success ', 'Data user berhasil di tambahkam');
-            return redirect('login');
         }
+        return redirect('/');
    }
    public function update(Request $request, $id){
     dd($request);

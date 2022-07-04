@@ -34,7 +34,7 @@
             <ul class="submenu ">
 
                 <li>
-                    <a href="component-alert.html">All</a>
+                    <a href="mutation">All</a>
                 </li>
 
                 <li>
@@ -45,7 +45,7 @@
                     <a href="component-breadcrumb.html">Credit</a>
                 </li>
 
-    
+
             </ul>
 
         </li>
@@ -54,7 +54,7 @@
 
         <li class="sidebar-item">
 
-         
+
 
         </li>
 
