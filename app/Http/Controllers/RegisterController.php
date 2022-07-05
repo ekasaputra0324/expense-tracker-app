@@ -17,15 +17,13 @@ class RegisterController extends Controller
     public function store(Request $request){
         $password = $request->password;
         $hash = Hash::make($password);
-        // dd($hash);
         $data = new User();
         $data->name = $request->username;
         $data->email = $request->email;
         $data->password = $hash;
-        if ($data->save()) {
-            Alert::success('Success ', 'Data user berhasil di tambahkam');
-        }
-        return redirect('/');
+        $data->save();
+        Alert::success('Success ', 'Data user berhasil di tambahkan');
+        return redirect('/register');
    }
    public function update(Request $request, $id){
     dd($request);

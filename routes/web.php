@@ -18,22 +18,23 @@ use Illuminate\Support\Facades\Route;
 */
 // dashboard / home
 Route::controller(HomeController::class)->group(function(){
-    Route::get('/dashboard','index')->name('dashboard')->middleware('auth');
+    Route::get('/home','index')->name('dashboard')->middleware('auth');
 });
 // login
 Route::controller(LoginController::class)->group(function(){
     Route::get('/','index')->name('login')->middleware('guest');
-    Route::post('/login', 'authenticate')->name('authenticate');
+    Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::post('/logout', 'logout')->name('logout');
 });
 // register
 Route::controller(RegisterController::class)->group(function(){
     Route::get('/register','index')->name('register')->middleware('guest');
-    Route::post('/register', 'store')->name('store');
+    Route::post('/register', 'store')->name('store-register');
 });
 // mutasi
 Route::controller(MutationController::class)->group(function(){
     Route::get('/mutation','index')->name('mutation')->middleware('auth');
     Route::get('/mutation/debit','debit')->name('credit')->middleware('auth');
     Route::get('/mutation/credit','credit')->name('debit')->middleware('auth');
+    Route::post('/mutation/store','store')->name('store');
 });

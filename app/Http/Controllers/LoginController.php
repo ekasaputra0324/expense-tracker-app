@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Stmt\Return_;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
@@ -18,13 +20,26 @@ class LoginController extends Controller
     {
 
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'email' => ['required'],
             'password' => ['required'],
         ]);
-        if (Auth::attempt($credentials))
-            $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+        $email = $request->email;
+        $user = User::where('email', $email)->count();
+        if ($user > 0) {
+            if (Auth::attempt($credentials)){
+                $request->session()->regenerate();
+                Alert::success('Success ', 'Berasil Login');
+                return redirect()->intended('/home');
+            }
+            Alert::toast('email or password invalid', 'error');
+            return redirect()->intended('/');
+            }
+            Alert::toast('unregistered account', 'error');
+            return redirect()->intended('/');
+
         }
+            # code...
+
         public function logout(Request $request){
 
         Auth::logout();

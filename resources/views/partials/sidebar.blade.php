@@ -10,10 +10,9 @@
         <li class='sidebar-title'>MENU UTAMA</li>
 
 
-
         <li class="sidebar-item active ">
 
-            <a href="index.html" class='sidebar-link'>
+            <a href="/" class='sidebar-link'>
                 <i data-feather="home" width="20"></i>
                 <span>Dashboard</span>
             </a>
@@ -27,7 +26,7 @@
 
             <a href="#" class='sidebar-link'>
                 <i data-feather="file-text" width="20"></i>
-                <span>Mutasi</span>
+                <span>Mutation</span>
             </a>
 
 
@@ -44,7 +43,9 @@
                 <li>
                     <a href="component-breadcrumb.html">Credit</a>
                 </li>
-
+                <li>
+                    <a href="component-breadcrumb.html">Categori</a>
+                </li>
 
             </ul>
 

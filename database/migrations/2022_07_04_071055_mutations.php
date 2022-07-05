@@ -16,10 +16,12 @@ return new class extends Migration
         Schema::create('mutations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('Deskripsi');
-            $table->decimal('jumlah_uang');
-            $table->enum('Keterangan',['Debit','Credit']);
-            $table->date('tanggal_mutasi');
+            $table->unsignedBigInteger('categori_id');
+            $table->string('description');
+            $table->decimal('amount');
+            $table->enum('status',['Debit','Credit']);
+            $table->date('date');
+            $table->timestamp('updated_at');
             $table->foreign('user_id')->references('id')->on('users');
 
 
