@@ -70,13 +70,13 @@
                             <td>Rp.{{number_format($mutation->amount,2,',','.');}}</td>
                             <td>{{date('d-m-Y', strtotime($mutation->date));}}</td>
                             @if ($mutation->status === 'Debit')
-                                <td style="font-weight:bold; color:rgb(0, 179, 24)">Debit</td>
+                                <td style=" color:rgb(0, 179, 24)">Debit</td>
                             @else
-                            <td style="font-weight:bold; color:red">Credit</td>
+                            <td style=" color:red">Credit</td>
                             @endif
                             <td>
-                                <button class="btn btn-outline-success" style="button"><i class="fa-solid fa-pencil"></i></button>
-                                <button class="btn btn-outline-danger" style="button"><i class="fa-solid fa-trash"></i></button>
+                                <button class="btn btn-outline-success" style="button" ><i class="fa-solid fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger" style="button" onclick="deleted({{ $mutation->id }})" data-id=""><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <?php $i++; ?>
@@ -88,16 +88,8 @@
 
     </section>
 </div>
-            {{-- <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2022 &copy; Voler</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class='text-danger'><i data-feather="heart"></i></span> by <a href="https://saugi.me">Saugi</a></p>
-                    </div>
-                </div>
-            </footer> --}}
+           {{-- footer --}}
+           {{-- akhir footer --}}
         </div>
     </div>
     {{-- modal --}}
@@ -156,12 +148,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
     <script src="assets/js/vendors.js"></script>
-    <script>
-        $('#table1').dataTable( {
-           "ordering": false
-        } );
-    </script>
-
+    <script src="assets/js/template/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/pages/mutations.js"></script>
 </body>
 </html>

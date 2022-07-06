@@ -37,4 +37,5 @@ Route::controller(MutationController::class)->group(function(){
     Route::get('/mutation/debit','debit')->name('credit')->middleware('auth');
     Route::get('/mutation/credit','credit')->name('debit')->middleware('auth');
     Route::post('/mutation/store','store')->name('store');
+    Route::get('/mutation/drop/{id}', 'drop')->name('drop')->middleware('auth');
 });

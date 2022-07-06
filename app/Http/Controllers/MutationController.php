@@ -13,7 +13,7 @@ class MutationController extends Controller
 
     $mutations =  DB::table('mutations')
                     ->join('categoris', 'mutations.categori_id', '=', 'categoris.id')->join('users', 'mutations.user_id', '=', 'users.id')
-                    ->select('categoris.id', 'mutations.amount', 'mutations.description', 'mutations.date','mutations.status','categoris.name','users.id')->get();
+                    ->select('mutations.id', 'mutations.amount', 'mutations.description', 'mutations.date','mutations.status','categoris.name')->get();
 
      return view('mutation.index',[
         "categories" => Categori::all(),
@@ -43,7 +43,13 @@ class MutationController extends Controller
         return redirect('/mutation');
 
     }
+   }
+   public function drop($id){
 
-
+     $mutations = Mutation::where('id', $id);
+     $mutations->delete();
+     Alert::toast('mutation successfully deleted', 'success');
+     return redirect('/mutation');
+      
    }
 }
