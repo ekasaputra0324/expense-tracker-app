@@ -24,14 +24,14 @@ class MutationController extends Controller
     }
     public function store(Request $request)
     {
-        $request->validate([
-            "categori_id" => "required",
-            "date" => "required",
-            "amount" => "required",
-            "user_id" => "required",
-            "description" => "required",
-            "status" => "required"
-        ]);
+        // $request->validate([
+        //     "categori_id" => "required",
+        //     "date" => "required",
+        //     "amount" => "required",
+        //     "user_id" => "required",
+        //     "description" => "required",
+        //     "status" => "required"
+        // ]);
 
         $mutations = new Mutation();
         $mutations->user_id = $request->user_id;
@@ -52,5 +52,46 @@ class MutationController extends Controller
         $mutations->delete();
         Alert::toast('mutation successfully deleted', 'success');
         return redirect('/mutation');
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $request->validate([
+            "categori_id" => "required",
+            "date" => "required",
+            "amount" => "required",
+            "user_id" => "required",
+            "description" => "required",
+            "status" => "required"
+        ]);
+
+        $mutations = Mutation::where('id', $id);
+        $data =   $mutations->update([
+            "user_id" => $request->user_id,
+            "categori_id" => $request->categori_id,
+            "amount" => $request->amount,
+            "status" => $request->status,
+            "description" => $request->description,
+            "date" => $request->date,
+        ]);
+        if ($data > 0) {
+            Alert::toast('mutation successfully Changes', 'success');
+            return redirect('/mutation');
+        }else{
+            Alert::toast('mutation successfully Changes', 'error');
+            return redirect('/mutation');
+        }
+
+
+        Alert::toast('mutation failed Changes', 'error');
+        return redirect('/mutation');
+    }
+
+    public function getdataByid($id)
+    {
+
+        $mutations = Mutation::where('id', $id)->get();
+        echo json_encode($mutations);
     }
 }

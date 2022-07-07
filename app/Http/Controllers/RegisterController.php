@@ -6,15 +6,24 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redis;
-Use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
+
 class RegisterController extends Controller
 {
-    public function index(){
-        return view('login,register.register',[
-        "title" => "Register"
+    public function index()
+    {
+        return view('login,register.register', [
+            "title" => "Register"
         ]);
     }
-    public function store(Request $request){
+    public function store(Request $request)
+    {
+        $users = User::where('email', $request->email)->count();
+        if ($users > 0) {
+            Alert::toast('Email alredy exist','error');
+            return redirect('/register');
+        }
+
         $password = $request->password;
         $hash = Hash::make($password);
         $data = new User();
@@ -24,8 +33,9 @@ class RegisterController extends Controller
         $data->save();
         Alert::success('Success ', 'Data user berhasil di tambahkan');
         return redirect('/register');
-   }
-   public function update(Request $request, $id){
-    dd($request);
-   }
+    }
+    public function update(Request $request, $id)
+    {
+        dd($request);
+    }
 }
