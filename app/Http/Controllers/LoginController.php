@@ -11,8 +11,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
-    public function index(){
-        return view('login,register.login',[
+    public function index()
+    {
+        return view('login,register.login', [
             "title" => "Login"
         ]);
     }
@@ -26,21 +27,21 @@ class LoginController extends Controller
         $email = $request->email;
         $user = User::where('email', $email)->count();
         if ($user > 0) {
-            if (Auth::attempt($credentials)){
+            if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
                 Alert::success('Success ', 'Berasil Login');
                 return redirect()->intended('/home');
             }
             Alert::toast('email or password invalid', 'error');
             return redirect()->intended('/');
-            }
-            Alert::toast('unregistered account', 'error');
-            return redirect()->intended('/');
-
         }
-            # code...
+        Alert::toast('unregistered account', 'error');
+        return redirect()->intended('/');
+    }
+    # code...
 
-        public function logout(Request $request){
+    public function logout(Request $request)
+    {
 
         Auth::logout();
 
@@ -50,8 +51,4 @@ class LoginController extends Controller
 
         return redirect('/');
     }
-
-
-
 }
-
